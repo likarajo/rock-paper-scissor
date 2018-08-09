@@ -8,17 +8,17 @@ def play(user):
     if (c == 1):
         comp = 'rock'
         choiceComputer.config(text="Computer:\nROCK")
-        imgC = PhotoImage(file='rock.png')
+        imgC = PhotoImage(file='images/rock.png')
         canvas.itemconfig(imgComputer, image=imgC)
     elif (c == 2):
         comp = 'paper'
         choiceComputer.config(text="Computer:\nPAPER")
-        imgC = PhotoImage(file='paper.png')
+        imgC = PhotoImage(file='images/paper.png')
         canvas.itemconfig(imgComputer, image=imgC)
     else:
         comp = 'scissor'
         choiceComputer.config(text="Computer:\nSCISSOR")
-        imgC = PhotoImage(file='scissor.png')
+        imgC = PhotoImage(file='images/scissor.png')
         canvas.itemconfig(imgComputer, image=imgC)
 
     if (user == 'rock'):
@@ -46,21 +46,21 @@ def play(user):
 def selectRock():
     user = "rock"
     choiceUser.config(text="User:\nROCK")
-    imgU = PhotoImage(file='rock.png')
+    imgU = PhotoImage(file='images/rock.png')
     canvas.itemconfig(imgUser, image=imgU)
     play(user)
 
 def selectPaper():
     user = "paper"
     choiceUser.config(text="User:\nPAPER")
-    imgU = PhotoImage(file='paper.png')
+    imgU = PhotoImage(file='images/paper.png')
     canvas.itemconfig(imgUser, image=imgU)
     play(user)
 
 def selectScissor():
     user = "scissor"
     choiceUser.config(text="User:\nSCISSOR")
-    imgU = PhotoImage(file='scissor.png')
+    imgU = PhotoImage(file='images/scissor.png')
     canvas.itemconfig(imgUser, image=imgU)
     play(user)
 
@@ -84,9 +84,9 @@ choiceUser.pack(side=LEFT)
 choiceComputer = Label(root, text="Computer's\nChoice", bg="white", width=20)
 choiceComputer.pack(side=RIGHT)
 
-imgU = PhotoImage(file='user.png')
+imgU = PhotoImage(file='images/user.png')
 imgUser = canvas.create_image(0, 200, anchor=W, image=imgU)
-imgC = PhotoImage(file='computer.png')
+imgC = PhotoImage(file='images/computer.png')
 imgComputer = canvas.create_image(200, 200, anchor=W, image=imgC)
 canvas.pack()
 
