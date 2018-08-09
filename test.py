@@ -49,21 +49,21 @@ def selectRock():
     play(user)
     choiceUser.config(text="User:\nROCK")
     imgU1 = PhotoImage(file='images/rock.png')
-    canvas.itemconfig(imgUser, image=imgU1)
+    root.after(1000, canvas.itemconfig(imgUser, image=imgU1))
 
 def selectPaper():
     user = "paper"
     play(user)
     choiceUser.config(text="User:\nPAPER")
     imgU1 = PhotoImage(file='images/paper.png')
-    canvas.itemconfig(imgUser, image=imgU1)
+    root.after(1000, canvas.itemconfig(imgUser, image=imgU1))
 
 def selectScissor():
     user = "scissor"
     play(user)
     choiceUser.config(text="User:\nSCISSOR")
     imgU1 = PhotoImage(file='images/scissor.png')
-    canvas.itemconfig(imgUser, image=imgU1)
+    root.after(1000, canvas.itemconfig(imgUser, image=imgU1))
 
 root = Tk()
 
@@ -80,12 +80,13 @@ result.pack(fill=X, padx=50, pady=10)
 canvas=Canvas(root, height=400, width=400, bg="white")
 choiceUser = Label(root, text="User's\nChoice", bg="white", width=20)
 choiceUser.pack(side=LEFT)
+choiceComputer = Label(root, text="Computer's\nChoice", bg="white", width=20)
+choiceComputer.pack(side=RIGHT)
+canvas.pack()
+
 imgU = PhotoImage(file='images/user.png')
 imgUser = canvas.create_image(0, 200, anchor=W, image=imgU)
 imgC = PhotoImage(file='images/computer.png')
 imgComputer = canvas.create_image(200, 200, anchor=W, image=imgC)
-choiceComputer = Label(root, text="Computer's\nChoice", bg="white", width=20)
-choiceComputer.pack(side=RIGHT)
-canvas.pack()
 
 root.mainloop()
