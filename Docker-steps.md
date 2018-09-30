@@ -68,7 +68,7 @@ Hit CTRL+C in your terminal to quit.
 
 ## Run the app in the background, in detached mode
 ```unix
-docker run -d -p 4000:80 appName
+$ docker run -d -p 4000:80 appName
 ```
 You get the long container ID for your app and then are kicked back to your terminal. Your container is running in the background. You can also see the abbreviated container ID with docker container ls (and both work interchangeably when running commands):
 
@@ -87,7 +87,7 @@ $ docker container stop 1fa4ab2cf395
 $ docker login
 $ docker tag appName likarajo/appName:tag
 ```
-Run docker image ls to see your newly tagged image.
+View the newly tagged image
 ```linux
 $ docker image ls
 REPOSITORY         TAG                 IMAGE ID            CREATED             SIZE
