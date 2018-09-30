@@ -1,4 +1,4 @@
-# How to create a dopcker Image?
+# How to create a docker Image?
 
 ## Important files required to create the image
 + Dockerfile: defines what goes in the environment inside the container. 
