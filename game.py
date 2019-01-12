@@ -122,7 +122,7 @@ result.pack(fill=tk.X, padx=50, pady=10)
 choiceUser = tk.Label(root, text="User's\nChoice", bg="white", width=20)
 choiceUser.pack(side=tk.LEFT)
 
-imgUser = ImageTk.PhotoImage(Image.open("images/user.png"))
+imgUser = ImageTk.PhotoImage(Image.open('images/user.png'))
 panelUser = tk.Label(root, image = imgUser)
 panelUser.image = imgUser
 panelUser.pack(side=tk.LEFT)
