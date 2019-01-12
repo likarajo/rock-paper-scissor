@@ -1,4 +1,4 @@
-from tkinter import *
+import tkinter as tk
 from PIL import ImageTk, Image
 from random import *
 import webbrowser
@@ -101,38 +101,38 @@ def selectScissor():
 def openLink(event):
     webbrowser.open_new("https://github.com/likarajo")
 
-root = Tk()
+root = tk.Tk()
 root.title("Rock-Paper-Scissor GAME")
 
-Label(root, text="Welcome to the **** ROCK PAPER SCISSOR GAME ****", bg="blue", fg="white").pack(fill=X)
+tk.Label(root, text="Welcome to the **** ROCK PAPER SCISSOR GAME ****", bg="blue", fg="white").pack(fill=tk.X)
 
-link = Label(root, text="©likarajo", font= "Verdana 10 underline", fg="blue", cursor="hand2")
-link.pack(fill=X)
+link = tk.Label(root, text="likarajo", font= "Verdana 10 underline", fg="blue", cursor="hand2")
+link.pack(fill=tk.X)
 link.bind("<Button-1>", openLink)
 
-Label(root, text="Click on your choice").pack(fill=X)
+tk.Label(root, text="Click on your choice").pack(fill=tk.X)
 
-Button(root, text="ROCK", bg="grey", fg="black", command=selectRock).pack(fill=X, padx=200)
-Button(root, text="PAPER", bg="white", fg="black", command=selectPaper).pack(fill=X, padx=200)
-Button(root, text="SCISSOR", bg="black", fg="white", command=selectScissor).pack(fill=X, padx=200)
+tk.Button(root, text="ROCK", bg="white", fg="black", command=selectRock).pack(fill=tk.X, padx=200)
+tk.Button(root, text="PAPER", bg="white", fg="black", command=selectPaper).pack(fill=tk.X, padx=200)
+tk.Button(root, text="SCISSOR", bg="white", fg="black", command=selectScissor).pack(fill=tk.X, padx=200)
 
-result = Label(root, text="--Result--", bg="purple", fg="yellow")
-result.pack(fill=X, padx=50, pady=10)
+result = tk.Label(root, text="--Result--", bg="purple", fg="yellow")
+result.pack(fill=tk.X, padx=50, pady=10)
 
-choiceUser = Label(root, text="User's\nChoice", bg="white", width=20)
-choiceUser.pack(side=LEFT)
+choiceUser = tk.Label(root, text="User's\nChoice", bg="white", width=20)
+choiceUser.pack(side=tk.LEFT)
 
 imgUser = ImageTk.PhotoImage(Image.open("images/user.png"))
-panelUser = Label(root, image = imgUser)
+panelUser = tk.Label(root, image = imgUser)
 panelUser.image = imgUser
-panelUser.pack(side=LEFT)
+panelUser.pack(side=tk.LEFT)
 
 imgComp = ImageTk.PhotoImage(Image.open("images/computer.png"))
-panelComp = Label(root, image = imgComp)
+panelComp = tk.Label(root, image = imgComp)
 panelComp.image = imgComp
-panelComp.pack(side=LEFT)
+panelComp.pack(side=tk.LEFT)
 
-choiceComp = Label(root, text="Computer's\nChoice", bg="white", width=20)
-choiceComp.pack(side=LEFT)
+choiceComp = tk.Label(root, text="Computer's\nChoice", bg="white", width=20)
+choiceComp.pack(side=tk.LEFT)
 
 root.mainloop()
